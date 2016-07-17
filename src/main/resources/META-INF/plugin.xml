@@ -1,0 +1,31 @@
+<idea-plugin version="2">
+    <id>pl.otros.intellij.jumptocode.scala</id>
+    <name>OtrosJumpToCodeScala</name>
+    <version>0.1</version>
+    <vendor email="otros.systems+jumpToCode@gmail.com" url="https://github.com/otros-systems/OtrosJumpToCode">Otros Systems
+    </vendor>
+
+    <description><![CDATA[
+      ]]></description>
+
+    <change-notes><![CDATA[
+      <B>Version 0.1</B> Initial version<BR/>
+            ]]>
+    </change-notes>
+
+    <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="2016.1.3"/>
+
+    <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+    <depends>org.intellij.scala</depends>
+    <depends>pl.otros.intellij.JumpToCode</depends>
+    <extensions  defaultExtensionNs="pl.otros.intellij.JumpToCode" >
+        <locatorProvider implementation="jump.java.SomeJavaLocatorProvider" />
+        <locatorProvider implementation="jump.scala.ScalaLocatorProvider" />
+    </extensions>
+
+</idea-plugin>
